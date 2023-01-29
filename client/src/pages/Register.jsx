@@ -3,7 +3,6 @@ import { Form, Button } from "react-bootstrap";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 
-
 function RegisterPage() {
   const [formData, setFormData] = useState({
     name: "",
@@ -101,10 +100,7 @@ function RegisterPage() {
         </span>
       </Form>
     </div>
-    
   );
 }
 
 export default RegisterPage;
-
-

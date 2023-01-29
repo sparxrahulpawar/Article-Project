@@ -12,7 +12,7 @@ const AddArticle = () => {
     category: "",
     body: "",
   });
-  const [ setError] = useState(null);
+  const [setError] = useState(null);
 
   const handleChange = (event) => {
     setFormData({
@@ -37,7 +37,6 @@ const AddArticle = () => {
       .catch((err) => {
         setError(err.message);
       });
-    
   };
 
   return (
