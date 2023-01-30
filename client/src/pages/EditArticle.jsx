@@ -7,7 +7,6 @@ import "react-toastify/dist/ReactToastify.css";
 
 const EditArticle = () => {
   const { id } = useParams();
-  //   const [msg, setMsg] = useState("");
   const [imageUrl, setImageUrl] = useState();
   const [title, setTitle] = useState();
   const [tags, setTags] = useState();

@@ -90,23 +90,21 @@ export const viewArticle = async (req, res) => {
   }
 };
 
-
 //viewOneArticle
 export const viewOneArticle = async (req, res) => {
   try {
     const articleId = req.params.id;
-  articleModel.findById(articleId, (err, article) => {
-    if (err) {
-      res.status(500).send(err);
-      return;
-    }
-    if (!article) {
-      res.status(404).send('User not found');
-      return;
-    }
-    res.send(article);
-  });
-   
+    articleModel.findById(articleId, (err, article) => {
+      if (err) {
+        res.status(500).send(err);
+        return;
+      }
+      if (!article) {
+        res.status(404).send("User not found");
+        return;
+      }
+      res.send(article);
+    });
   } catch (error) {
     console.log(error);
     res.status(500).json({ message: "Something went wrong" });

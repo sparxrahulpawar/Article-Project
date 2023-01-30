@@ -19,26 +19,22 @@ router.post("/login", loginController);
 //REGISTER USER
 router.post("/register", registerController);
 
-
-
 //Create Article Route
 router.post("/add-article", auth, createArticle);
 
 //View Article
-router.get("/userArticle", auth,  viewArticle);
+router.get("/userArticle", auth, viewArticle);
 
 //View one Article
-router.get("/userArticle/:id",   viewOneArticle);
+router.get("/userArticle/:id", viewOneArticle);
 
 //delete user article
-router.delete("/deleteArticle/:id",  deleteArticle);
+router.delete("/deleteArticle/:id", deleteArticle);
 
 //update user article
-router.put("/editArticle/:id",  updateArticle);
-
+router.put("/editArticle/:id", updateArticle);
 
 //All user article
 router.get("/allArticles", getAllArticle);
-
 
 export default router;

@@ -29,10 +29,7 @@ function RegisterPage() {
       // Validate form data
       if (name && email && password) {
         // Call registration API
-        const response = await axios.post(
-          "http://localhost:8080/api/register",
-          formData
-        );
+        await axios.post("http://localhost:8080/api/register", formData);
       }
 
       // Handle successful registration

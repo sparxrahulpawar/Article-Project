@@ -3,7 +3,6 @@ import dotenv from "dotenv";
 import cors from "cors";
 import Connection from "./db/Connection.js";
 import userRouter from "./routes/userRoute.js";
-// import jwt from "jsonwebtoken";
 
 const app = express();
 
@@ -24,12 +23,6 @@ app.use((req, res, next) => {
   console.log("Http Method = " + req.method + ", Url = " + req.url);
   next();
 });
-// app.use((req, res, next) => {
-//   if (res.headersSent) {
-//     return next();
-//   }
-//   res.send('Hello, World!');
-// });
 
 //convert in json form
 app.use(express.json());
